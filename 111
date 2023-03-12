@@ -20,4 +20,4 @@ DAY_AFTER_TOMORROW_CONDITION=$(echo $FORECAST | jq -r '.list[15].weather[0].desc
 MESSAGE="贵阳现在的天气为：$CURRENT_TEMP℃，$CURRENT_CONDITION。明天的天气预报为：$TOMORROW_TEMP℃，$TOMORROW_CONDITION；后天的天气预报为：$DAY_AFTER_TOMORROW_TEMP℃，$DAY_AFTER_TOMORROW_CONDITION。"
 
 # 发送消息到Matrix
-curl -X POST -H "Content-Type: application/json" -d "{\"msgtype\": \"m.text\", \"body\": \"$MESSAGE\"}" "https://matrix.2046.eu.org/_matrix/client/r0/rooms/"\!qrCKXjlGOAUQAbBjUh:matrix.2046.eu.org"/send/m.room.message"
+curl -X POST -H "Content-Type: application/json" -d "{\"msgtype\": \"m.text\", \"body\": \"$MESSAGE\"}" "https://matrix.2046.eu.org/_matrix/client/r0/rooms/"\!qrCKXjlGOAUQAbBjUh:matrix.2046.eu.org"/send?access_token=syt_dHg_pSCDabYJPCXocWfhrWnZ_4VsSTM"
